@@ -1,0 +1,15 @@
+{
+  "hash": "b2e2c6f4919341c8496938da9e4e72bf",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: arti-muestra\nauthors:\n  - name: Norah Jones\n    affiliation: The University\n    roles: writing\n    corresponding: true\nbibliography: references.bib\n---\n\n\n\n\n\n## Section\nThis is a simple placeholder for the manuscript's main document [@knuth84].\n\n\n\n\n\n::: {.cell}\n\n```{.r .cell-code .hidden}\n1 + 1\n```\n\n::: {.cell-output .cell-output-stdout}\n\n```\n[1] 2\n```\n\n\n:::\n:::\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

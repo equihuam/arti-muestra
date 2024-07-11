@@ -1,0 +1,46 @@
+---
+title: Prepara mi artículo con RStudio?
+authors:
+  - name: Norah Jones
+    affiliation: The University
+    roles: writing
+    corresponding: true
+bibliography: references.bib
+---
+
+## Antecedentes
+
+En el camino que está tomando la *ciencia reproducible* están surgiendo estándares para transitar de la publicación como **evento final** a la publicación como **proceso trazable**. En el caso de *Quarto* esto se refleja de inicio en la posibilidad de generar archivos de salida *jats*. ¿Qué significa esto? Precisamente se trata de un sistema de documentación del proceso de integración de una publicación científica o tecnológica. *Journal Article Tag Suite* (**JATS**) es una especificación del conjunto de elementos y atributos que resultan utiles para construir modelos **XML** de artículos. Un destino de estos [**paquetes JATS**](https://www.niso.org/niso-io/2019/04/niso-publishes-update-journal-article-tag-suite-jats-standard-12) es la preparación de la publicación en revistas especializadas, otro uso es la canalización a sistemas dinámicos de archivado y distribución electrónica de docmentos. **JATS** se convirtió en una norma nacional estadounidense (ANSI/NISO Z39.96-2012) en agosto de 2012, pero ya era una especificación bien establecida (conocida por el nombre coloquial de "NLM DTD") cuando se empezó a trabajar en su normalización a finales de 2009. 
+
+La Organización Internacional de Estándares (ISO), ha tomado la norma Estadounidense ANSI/NISO Z39.96-2012, como base para el estandar internacional **ISOSTS** (*ISO Standards Tag Set*). El [grupo Scielo (Scientific Electronic Library Online) también ha adoptado este estandar](https://blog.scielo.org/es/2018/10/31/introduccion-a-jats-journal-article-tag-suite/) [@Rocha2023], así como otros proyectos editoriales latinoamericanos.
+
+El archivo _quarto.yml_ de un proyecto preparado para producir un manuscrito de artículo especializado es el siguiente. 
+
+```yml
+project:
+  type: manuscript
+
+manuscript:
+  article: index.qmd
+
+format:
+  html:
+    comments:
+      hypothesis: true
+  docx: default
+  jats: default
+
+  # (other formats)
+  # pdf: default
+
+execute:
+  freeze: true
+```
+
+Los dos formatos de salida preferidos son el de _MSWord_ y _jats_ precisamente. Con alta probabilidad, cualquiera de estos dos documentos servirán de base para enviar tu manuscrito a una revista especializada.
+
+![](img/jats.png)
+
+
+
+
